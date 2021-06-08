@@ -1,0 +1,235 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  PlusTweaksFMLLoadingPlugin (plustweaks-1.4.9.jar)
+  CTMCorePlugin (CTM-MC1.12.2-0.3.3.22.jar)
+Contact their authors BEFORE contacting forge
+
+// Don't do that.
+
+Time: 6/7/21 12:29 AM
+Description: Initializing game
+
+java.lang.NoClassDefFoundError: hellfirepvp/astralsorcery/common/starlight/transmission/registry/TransmissionClassRegistry$TransmissionProvider
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.privateGetPublicMethods(Unknown Source)
+	at java.lang.Class.getMethods(Unknown Source)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.register(EventBus.java:82)
+	at fr.frinn.modularmagic.ModularMagic.<init>(ModularMagic.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at net.minecraftforge.fml.common.ILanguageAdapter$JavaAdapter.getNewInstance(ILanguageAdapter.java:191)
+	at net.minecraftforge.fml.common.FMLModContainer.constructMod(FMLModContainer.java:599)
+	at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:595)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:232)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:467)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:378)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:210)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:245)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+Caused by: java.lang.ClassNotFoundException: hellfirepvp.astralsorcery.common.starlight.transmission.registry.TransmissionClassRegistry$TransmissionProvider
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 56 more
+Caused by: java.lang.NullPointerException
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.privateGetPublicMethods(Unknown Source)
+	at java.lang.Class.getMethods(Unknown Source)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.register(EventBus.java:82)
+	at fr.frinn.modularmagic.ModularMagic.<init>(ModularMagic.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at net.minecraftforge.fml.common.ILanguageAdapter$JavaAdapter.getNewInstance(ILanguageAdapter.java:191)
+	at net.minecraftforge.fml.common.FMLModContainer.constructMod(FMLModContainer.java:599)
+	at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:595)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:232)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:467)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:378)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:210)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:245)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_261, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 7408984448 bytes (7065 MB) / 10161750016 bytes (9691 MB) up to 10161750016 bytes (9691 MB)
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms10112m -Xmx10112m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2855 29 mods loaded, 29 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                | Version           | Source                                         | Signature                                |
+	|:----- |:----------------- |:----------------- |:---------------------------------------------- |:---------------------------------------- |
+	| LC    | minecraft         | 1.12.2            | minecraft.jar                                  | None                                     |
+	| LC    | mcp               | 9.42              | minecraft.jar                                  | None                                     |
+	| LC    | FML               | 8.0.99.99         | forge-1.12.2-14.23.5.2855-universal.jar        | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LC    | forge             | 14.23.5.2855      | forge-1.12.2-14.23.5.2855-universal.jar        | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LC    | crafttweaker      | 4.1.20            | CraftTweaker2-1.12-4.1.20.647.jar              | None                                     |
+	| LC    | jei               | 4.16.1.301        | jei_1.12.2-4.16.1.301.jar                      | None                                     |
+	| LC    | base              | 3.13.0            | base-1.12.2-3.13.0.jar                         | None                                     |
+	| LC    | baubles           | 1.5.2             | Baubles-1.12-1.5.2.jar                         | None                                     |
+	| LC    | botania           | r1.10-361         | Botania+r1.10-361.jar                          | None                                     |
+	| LC    | codechickenlib    | 3.2.3.358         | CodeChickenLib-1.12.2-3.2.3.358-universal.jar  | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LC    | redstoneflux      | 2.1.1             | RedstoneFlux-1.12-2.1.1.1-universal.jar        | None                                     |
+	| LC    | cofhcore          | 4.6.6             | CoFHCore-1.12.2-4.6.6.1-universal.jar          | None                                     |
+	| LC    | cofhworld         | 1.4.0             | CoFHWorld-1.12.2-1.4.0.1-universal.jar         | None                                     |
+	| LC    | mantle            | 1.12-1.3.3.55     | Mantle-1.12-1.3.3.55.jar                       | None                                     |
+	| LC    | tconstruct        | 1.12.2-2.13.0.171 | TConstruct-1.12.2-2.13.0.171.jar               | None                                     |
+	| LC    | contenttweaker    | 1.12.2-4.9.1      | ContentTweaker-1.12.2-4.9.1.jar                | None                                     |
+	| LC    | ctgui             | 1.0.0             | CraftTweaker2-1.12-4.1.20.647.jar              | None                                     |
+	| LC    | crafttweakerjei   | 2.0.3             | CraftTweaker2-1.12-4.1.20.647.jar              | None                                     |
+	| LC    | ctm               | MC1.12.2-0.3.3.22 | CTM-MC1.12.2-0.3.3.22.jar                      | None                                     |
+	| LC    | ic2               | 2.8.221-ex112     | industrialcraft-2-2.8.221-ex112.jar            | de041f9f6187debbc77034a344134053277aa3b0 |
+	| LC    | inspirations      | 1.12.2-0.2.8      | Inspirations-1.12.2-0.2.8.jar                  | None                                     |
+	| LC    | modularmachinery  | 1.10.0            | modularmachinery-1.12.2-1.10.0.jar             | a0f0b759d895c15ceb3e3bcb5f3c2db7c582edf0 |
+	| LC    | modulardiversity  | 1.8               | Modular Diversity-1.8.jar                      | None                                     |
+	| L     | modularmagic      | 1.4.0             | modularmagic-1.4.0.jar                         | None                                     |
+	| L     | morecauldrons     | 1.4.6             | More-Cauldrons-1.4.6.jar                       | None                                     |
+	| L     | mousetweaks       | 2.10              | MouseTweaks-2.10-mc1.12.2.jar                  | None                                     |
+	| L     | plustweaks        | 1.4.9             | plustweaks-1.4.9.jar                           | None                                     |
+	| L     | thermalfoundation | 2.6.7             | ThermalFoundation-1.12.2-2.6.7.1-universal.jar | None                                     |
+	| L     | thermalexpansion  | 5.5.7             | ThermalExpansion-1.12.2-5.5.7.1-universal.jar  | None                                     |
+
+	Loaded coremods (and transformers): 
+PlusTweaksFMLLoadingPlugin (plustweaks-1.4.9.jar)
+  
+CTMCorePlugin (CTM-MC1.12.2-0.3.3.22.jar)
+  team.chisel.ctm.client.asm.CTMTransformer
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 462.30' Renderer: 'GeForce GTX 1050 Ti/PCIe/SSE2'
+	Pulsar/tconstruct loaded Pulses: 
+		- TinkerCommons (Enabled/Forced)
+		- TinkerWorld (Enabled/Not Forced)
+		- TinkerTools (Enabled/Not Forced)
+		- TinkerHarvestTools (Enabled/Forced)
+		- TinkerMeleeWeapons (Enabled/Forced)
+		- TinkerRangedWeapons (Enabled/Forced)
+		- TinkerModifiers (Enabled/Forced)
+		- TinkerSmeltery (Enabled/Not Forced)
+		- TinkerGadgets (Enabled/Not Forced)
+		- TinkerOredict (Enabled/Forced)
+		- TinkerIntegration (Enabled/Forced)
+		- TinkerFluids (Enabled/Forced)
+		- TinkerMaterials (Enabled/Forced)
+		- TinkerModelRegister (Enabled/Forced)
+
+	Pulsar/inspirations loaded Pulses: 
+		- InspirationsShared (Enabled/Forced)
+		- InspirationsBuilding (Enabled/Not Forced)
+		- InspirationsUtility (Enabled/Not Forced)
+		- InspirationsTools (Enabled/Not Forced)
+		- InspirationsRecipes (Enabled/Not Forced)
+		- InspirationsTweaks (Enabled/Not Forced)
+		- InspirationsShared (Enabled/Forced)
+
+	Launched Version: MultiMC5
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 1050 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 462.30, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	CPU: 6x Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
