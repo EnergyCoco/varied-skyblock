@@ -8,4 +8,4 @@ recipes.addShaped(<botania:alchemycatalyst>, [[<ore:livingrock>, <minecraft:gold
 //花药台
 mods.botania.Apothecary.addRecipe(<extrautils2:ironwood_sapling>,[<ore:treeLeaves>,<ore:treeLeaves>,<ore:treeLeaves>,<ore:treeLeaves>,<botania:manaresource:23>]);
 //炼金催化
-mods.botania.ManaInfusion.addAlchemy(<minecraft:dye:15>*2,<minecraft:dye:15>,300);
+mods.botania.ManaInfusion.addAlchemy(<minecraft:dye:15>*2,<minecraft:dye:15>,3000);
