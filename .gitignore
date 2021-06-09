@@ -1,5 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-	/build/.minecraft/saves
+	/mtk/.minecraft/saves
 	/mtk/natives
